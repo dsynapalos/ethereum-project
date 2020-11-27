@@ -9,53 +9,7 @@ if (typeof web3 !== 'undefined') {
 web3.eth.defaultAccount = web3.eth.accounts[0];
 
 //ABI
-var SimpleContract = web3.eth.contract([
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "count",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [],
-		"name": "flipSwitch",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "state",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	}
-])
-
-var simplecontract = SimpleContract.at("");
+var SimpleContract = web3.eth.contract([],"")
 
 function flipswitch(){
   var swtich = simplecontract.flipSwitch.call();
