@@ -1,6 +1,6 @@
-const path = require(path);
-const fs = require(fs);
-const solc = require(solc);
+const path = require('path');
+const fs = require('fs');
+const solc = require('solc');
 
 const pathtocontract = path.resolve(__dirname,'contract.sol');
 const contract = fs.readFileSync(pathtocontract,'utf8');
